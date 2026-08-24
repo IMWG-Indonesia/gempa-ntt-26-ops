@@ -1,1 +1,1 @@
-# gempa-ntb-26-ops
+# gempa-ntt-26-ops
