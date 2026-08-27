@@ -1,0 +1,75 @@
+name: Masalah Produk atau Data
+description: Ada yang keliru pada produk atau data yang sudah terlanjur beredar
+type: Incident
+title: "[Masalah] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gunakan ini kalau ada yang sudah keluar dan ternyata bermasalah:
+        angka salah pada produk yang sudah dipakai rapat, data pribadi ikut terbawa
+        ke berkas yang disebar, peta dengan wilayah yang keliru, sumber data yang mendadak
+        tidak bisa diakses.
+
+        **Ini bukan tempat menyalahkan siapa pun.** Yang dicari adalah apa yang sudah
+        terlanjur beredar dan bagaimana menghentikan dampaknya.
+
+  - type: textarea
+    id: kejadian
+    attributes:
+      label: Apa yang terjadi
+      description: Tulis apa yang terlihat, bukan dugaan penyebabnya.
+    validations:
+      required: true
+
+  - type: input
+    id: sejak
+    attributes:
+      label: Sejak kapan
+      description: Perkiraan waktu produk atau data bermasalah itu mulai beredar.
+      placeholder: 22 Agustus 2026, sekitar sore
+    validations:
+      required: true
+
+  - type: textarea
+    id: sebaran
+    attributes:
+      label: Sudah sampai mana beredarnya
+      description: |
+        Siapa yang kemungkinan sudah memakainya, dan di forum apa.
+        Ini yang menentukan seberapa cepat perlu ditarik atau diralat.
+      placeholder: |
+        Sudah masuk lampiran laporan situasi dan dibagikan di dua grup koordinasi.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kategori
+    attributes:
+      label: Jenis masalah
+      options:
+        - Angka atau data keliru
+        - Data pribadi ikut terbawa
+        - Wilayah atau geometri keliru
+        - Sumber data tidak bisa diakses
+        - Produk dipakai di luar konteksnya
+        - Lainnya
+    validations:
+      required: true
+
+  - type: textarea
+    id: penanganan
+    attributes:
+      label: Sudah dilakukan apa
+      description: Kalau belum ada, tulis `belum ada`.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Tugas jenis ini otomatis jadi antrean sekretariat. Kalau menyangkut data pribadi,
+        tambahkan label `tanda:sensitif` dan segera kabari koordinator lewat WhatsApp.
+        Jangan menunggu tugas ini dibaca.
