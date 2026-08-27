@@ -1,18 +1,19 @@
-# Konvensi Papan Tugas IMWG
+# Cara Kerja Papan Tugas IMWG
 
-Berlaku untuk semua aktivasi. Dibaca sekali di awal, tidak perlu dihafal.
+> [!NOTE]
+> Dokumen ini masih dalam bentuk awal dan sengaja belum lengkap. Isinya akan berubah mengikuti apa yang ternyata dibutuhkan di lapangan, bukan sebaliknya. Kalau ada yang terasa berlebihan, membingungkan, atau justru kurang, sampaikan. Lihat bagian terakhir.
+
+**Yang perlu diketahui untuk mulai berkontribusi cuma tiga hal:**
+
+1. Ambil tugas dari kolom **Prioritas Hari Ini**
+2. Tulis di kolom komentar bahwa kamu mengambilnya
+3. Unggah hasilnya ke folder kerja bersama, tempel tautannya di tugas
+
+Sisanya adalah penjelasan, bukan syarat.
 
 ---
 
-## Prinsip dasar
-
-**Field untuk yang tunggal, label untuk yang jamak.** Prioritas dan tenggat cuma boleh satu nilai per tugas, jadi tempatnya di field. Sebuah tugas bisa sekaligus butuh keputusan sekretariat dan terhambat data, jadi itu tempatnya di label.
-
-**Penomoran hanya menambah, tidak menyisipkan.** Nomor tugas adalah identitas, bukan urutan kerja. Urutan diatur lewat tenggat, milestone, dan siapa yang memegang. Tugas baru masuk di ujung.
-
-**Prioritas dan tenggat tidak ditulis di badan tugas.** Kalau ditulis di badan, tidak bisa disortir dan tidak bisa difilter. Dan saat berubah, versi lamanya tetap tertinggal di teks.
-
----
+# Untuk semua
 
 ## Jenis tugas
 
@@ -32,70 +33,20 @@ Jenis **Finding** adalah yang paling sering terlupa, padahal paling berharga di 
 
 ---
 
-## Field
-
-Ditetapkan di tingkat organisasi. Field harus diatur **visibility**-nya ke jenis tugas tertentu, kalau tidak dia tidak muncul di panel kanan. Ini yang sering bikin orang mengira fiturnya rusak.
-
-| Field | Dipakai untuk |
-|---|---|
-| **Priority** | Urgent / High / Medium / Low. Pakai apa adanya. |
-| **Target date** | Menggantikan baris tenggat di badan tugas, sehingga bisa disortir. |
-| **Effort** | **Perkiraan jam kerja, bukan hari.** Satuan ini yang membuat kontributor berslot dua jam bisa menyaring sendiri tugas yang muat. |
-| **Diminta oleh** | Field kustom, pilihan tunggal. Berguna untuk melihat dari mana permintaan sebenarnya datang, dan permintaan pihak mana yang paling sering menggantung. |
-
----
-
-## Label
-
-Tiga dimensi. Jumlahnya sengaja ditahan supaya tim kecil tidak menghabiskan waktu memilih label.
-
-**`bidang:`** menunjukkan keahlian yang dibutuhkan. Satu per tugas, wajib.
-
-| Label | Keahlian yang dicari |
-|---|---|
-| `bidang:gis` | Analisis geospasial dan produksi peta |
-| `bidang:data` | Pembersihan, penggabungan, dan pengolahan data tabular |
-| `bidang:mdc` | Perancangan formulir pendataan dan pengelolaan datanya |
-| `bidang:infografis` | Produk grafis statis: poster, ringkasan satu halaman, ilustrasi. Dikerjakan dengan Inkscape, Illustrator, Canva, atau sejenisnya. |
-| `bidang:dashboard` | Tampilan data yang bisa ditelusuri sendiri oleh pembacanya. Power BI, Looker Studio, Tableau, atau buatan sendiri dengan HTML/CSS/JS. |
-| `bidang:analisis` | Penafsiran situasi dan kebutuhan, bukan sekadar penyajian angka |
-| `bidang:qa` | Pemeriksaan mutu sebelum produk beredar |
-| `bidang:dokumentasi` | Metodologi, catatan sumber, panduan |
-
-Dua label yang paling sering tertukar adalah `bidang:infografis` dan `bidang:dashboard`. Pembedanya bukan perkakas, melainkan **apakah pembacanya bisa menelusuri sendiri.** Infografis sudah selesai saat dikirim, karena pembaca menerima kesimpulan yang sudah dipilihkan. Dasbor menyerahkan penyaringan kepada pembaca, sehingga menuntut data yang lebih rapi dan pemutakhiran yang berkelanjutan.
-
-Ini penting saat menerima permintaan. "Bikin dasbor" sering sebenarnya berarti "saya butuh satu gambar untuk rapat besok", dan kalau salah dibaca, kita membangun sesuatu yang perlu dirawat berbulan-bulan padahal yang dibutuhkan cuma satu lembar. Kalau ragu, tanyakan di tugasnya: apakah ini akan dibuka berulang kali, atau cukup sekali dipakai lalu selesai.
-
-**`wilayah:`** menunjukkan cakupan geografis. Satu per tugas, wajib. Pakai `wilayah:semua` untuk produk yang lintas wilayah.
-
-**`tanda:`** boleh lebih dari satu, boleh tidak ada. Ini yang tidak bisa digantikan field, karena field hanya menampung satu nilai.
-
-| Tanda | Arti |
-|---|---|
-| `tanda:butuh-keputusan` | Menunggu keputusan sekretariat sebelum bisa jalan |
-| `tanda:butuh-data` | Terhambat karena sumber datanya belum ada atau belum bisa diakses |
-| `tanda:menunggu-pihak-luar` | Menunggu jawaban dari luar jejaring. Sebutkan siapa dan sejak kapan di komentar. |
-| `tanda:cepat` | Selesai di bawah dua jam, cocok untuk kontributor yang baru bergabung |
-| `tanda:sensitif` | Menyangkut data pribadi atau informasi yang bisa merugikan bila salah beredar. Wajib diperiksa orang kedua sebelum keluar. |
-
-Tiga tanda pertama adalah **antrean koordinator, bukan antrean kontributor.** Filter ketiganya setiap beberapa hari. Kalau menumpuk, yang memperlambat produksi kemungkinan besar bukan kurangnya tenaga.
-
-`tanda:cepat` sebaiknya selalu ada isinya. Kontributor baru yang membuka papan dan hanya melihat tugas berdurasi enam jam biasanya menutupnya lagi.
-
----
-
 ## Struktur badan tugas
 
 Tujuh bagian tetap untuk jenis Task. Semuanya sudah tersedia sebagai formulir, jadi tidak perlu diketik ulang.
 
 ```
-Pekerjaan      Satu kalimat, apa yang dikerjakan.
-Tujuan         Masalah konkret apa yang ditutup, keputusan apa yang dibantu.
-Hasil          Daftar keluaran yang bisa diperiksa.
-Selesai bila   Kriteria yang bisa dicek sendiri tanpa bertanya balik.
-Format         Wujud berkas dan di folder mana disimpan.
-Sumber data    Tautan. Yang belum ada ditulis "belum tersedia", bukan dikosongkan.
-Diminta oleh   Nama pemohon, bukan pengerja.
+Pekerjaan        Satu kalimat, apa yang dikerjakan.
+Tujuan           Masalah konkret apa yang ditutup, keputusan apa yang dibantu.
+Hasil            Daftar keluaran yang bisa diperiksa.
+Selesai bila     Kriteria yang bisa dicek sendiri tanpa bertanya balik.
+Format           Wujud berkas dan di folder mana disimpan.
+Sumber data      Tautan. Yang belum ada ditulis "belum tersedia", bukan dikosongkan.
+Diminta oleh     Nama pemohon, bukan pengerja.
+Asal permintaan  Dari percakapan mana dan tanggal berapa. Boleh kosong kalau
+                 permintaannya memang lahir di papan ini.
 ```
 
 ### Contoh tugas yang sudah terisi
@@ -155,6 +106,45 @@ Alasannya sederhana. Produk informasi yang hanya bisa dijelaskan oleh pembuatnya
 
 ---
 
+## Label
+
+Tiga dimensi. Jumlahnya sengaja ditahan supaya tim kecil tidak menghabiskan waktu memilih label.
+
+**`bidang:`** menunjukkan keahlian yang dibutuhkan. Satu per tugas, wajib.
+
+| Label | Keahlian yang dicari |
+|---|---|
+| `bidang:gis` | Analisis geospasial dan produksi peta |
+| `bidang:data` | Pembersihan, penggabungan, dan pengolahan data tabular |
+| `bidang:mdc` | Perancangan formulir pendataan dan pengelolaan datanya |
+| `bidang:infografis` | Produk grafis statis: poster, ringkasan satu halaman, ilustrasi. Dikerjakan dengan Inkscape, Illustrator, Canva, atau sejenisnya. |
+| `bidang:dashboard` | Tampilan data yang bisa ditelusuri sendiri oleh pembacanya. Power BI, Looker Studio, Tableau, atau buatan sendiri dengan HTML/CSS/JS. |
+| `bidang:analisis` | Penafsiran situasi dan kebutuhan, bukan sekadar penyajian angka |
+| `bidang:qa` | Pemeriksaan mutu sebelum produk beredar |
+| `bidang:dokumentasi` | Metodologi, catatan sumber, panduan |
+
+Dua label yang paling sering tertukar adalah `bidang:infografis` dan `bidang:dashboard`. Pembedanya bukan perkakas, melainkan **apakah pembacanya bisa menelusuri sendiri.** Infografis sudah selesai saat dikirim, karena pembaca menerima kesimpulan yang sudah dipilihkan. Dasbor menyerahkan penyaringan kepada pembaca, sehingga menuntut data yang lebih rapi dan pemutakhiran yang berkelanjutan.
+
+Ini penting saat menerima permintaan. "Bikin dasbor" sering sebenarnya berarti "saya butuh satu gambar untuk rapat besok", dan kalau salah dibaca, kita membangun sesuatu yang perlu dirawat berbulan-bulan padahal yang dibutuhkan cuma satu lembar. Kalau ragu, tanyakan di tugasnya: apakah ini akan dibuka berulang kali, atau cukup sekali dipakai lalu selesai.
+
+**`wilayah:`** menunjukkan cakupan geografis. Satu per tugas, wajib. Pakai `wilayah:semua` untuk produk yang lintas wilayah.
+
+**`tanda:`** boleh lebih dari satu, boleh tidak ada. Ini yang tidak bisa digantikan field, karena field hanya menampung satu nilai.
+
+| Tanda | Arti |
+|---|---|
+| `tanda:butuh-keputusan` | Menunggu keputusan sekretariat sebelum bisa jalan |
+| `tanda:butuh-data` | Terhambat karena sumber datanya belum ada atau belum bisa diakses |
+| `tanda:menunggu-pihak-luar` | Menunggu jawaban dari luar jejaring. Sebutkan siapa dan sejak kapan di komentar. |
+| `tanda:cepat` | Selesai di bawah dua jam, cocok untuk kontributor yang baru bergabung |
+| `tanda:sensitif` | Menyangkut data pribadi atau informasi yang bisa merugikan bila salah beredar. Wajib diperiksa orang kedua sebelum keluar. |
+
+Tiga tanda pertama adalah **antrean koordinator, bukan antrean kontributor.** Filter ketiganya setiap beberapa hari. Kalau menumpuk, yang memperlambat produksi kemungkinan besar bukan kurangnya tenaga.
+
+`tanda:cepat` sebaiknya selalu ada isinya. Kontributor baru yang membuka papan dan hanya melihat tugas berdurasi enam jam biasanya menutupnya lagi.
+
+---
+
 ## Papan
 
 Kolom: `Permintaan Masuk` → `Prioritas Hari Ini` → `Dikerjakan` → `Review` → `Selesai`, ditambah `Terhambat` di samping.
@@ -171,6 +161,26 @@ Dua tampilan yang cukup:
 
 - **Papan** dikelompokkan menurut status, untuk kerja harian
 - **Tabel** diurutkan menurut tenggat dengan saringan `tanda:`, untuk tinjauan berkala
+
+---
+
+
+---
+
+# Untuk koordinator dan petugas piket
+
+Bagian ini tidak perlu dibaca kalau kamu datang untuk mengerjakan tugas.
+
+## Field
+
+Ditetapkan di tingkat organisasi. Field harus diatur **visibility**-nya ke jenis tugas tertentu, kalau tidak dia tidak muncul di panel kanan. Ini yang sering bikin orang mengira fiturnya rusak.
+
+| Field | Dipakai untuk |
+|---|---|
+| **Priority** | Urgent / High / Medium / Low. Pakai apa adanya. |
+| **Target date** | Menggantikan baris tenggat di badan tugas, sehingga bisa disortir. |
+| **Effort** | **Perkiraan jam kerja, bukan hari.** Satuan ini yang membuat kontributor berslot dua jam bisa menyaring sendiri tugas yang muat. |
+| **Diminta oleh** | Field kustom, pilihan tunggal. Berguna untuk melihat dari mana permintaan sebenarnya datang, dan permintaan pihak mana yang paling sering menggantung. |
 
 ---
 
@@ -212,58 +222,83 @@ Permintaan yang benar-benar mendesak tetap disampaikan lewat WhatsApp, dikerjaka
 
 ---
 
-## Milestone untuk fase respons
+## Dari percakapan ke papan, lalu kembali
 
-Karena penomoran hanya menambah, urutan fase diatur lewat milestone. Bisa dipindah tanpa menyentuh nomor tugas mana pun.
+Sebagian besar permintaan tidak lahir di papan. Datangnya dari grup WhatsApp, telepon, japri, atau rapat. Kalau dibiarkan berhenti di sana, papan ini akan berisi sebagian kecil saja dari pekerjaan yang sebenarnya berjalan, dan itu lebih menyesatkan daripada tidak punya papan sama sekali.
 
-`F1 Gambaran Awal` · `F2 Pendataan Pelaku dan Kegiatan` · `F3 Analisis Kebutuhan` · `F4 Transisi`
+Alurnya tiga langkah:
+
+1. **Permintaan muncul** di percakapan mana pun
+2. **Disadur ke papan** dengan format baku, mencantumkan asal permintaannya
+3. **Diumumkan kembali** ke grup WhatsApp beserta tautannya
+
+Langkah ketiga yang paling sering dilewat, padahal justru itu yang membuat mekanisme ini terasa berguna bagi orang yang tidak membuka GitHub. Pemohon melihat permintaannya diterima dan tercatat. Kontributor melihat ada pekerjaan baru yang bisa diambil. Keduanya tidak perlu memantau papan untuk tahu.
+
+### Format pengumuman ke WhatsApp
+
+Disalin dari tugas yang sudah dibuat, dipangkas seperlunya supaya nyaman dibaca di layar ponsel.
+
+```
+🆕 *TUGAS BARU* #23
+
+*Apa*: Peta sebaran lokasi pengungsian per kecamatan
+*Untuk*: Bahan rapat koordinasi lintas klaster
+*Hasil*: Peta A3 dengan titik pengungsian, jumlah jiwa,
+dan nama kecamatan
+*Format*: PNG dan PDF
+
+*Bidang*: gis
+*Prioritas*: Tinggi
+*Tenggat*: 28 Agustus, 17.00
+*Perkiraan*: 3 jam
+*Pemohon*: Sekretariat IHCP
+
+Ambil di sini, tulis di komentar kalau mengambilnya:
+https://github.com/IMWG-Indonesia/gempa-ntt-26-ops/issues/23
+```
+
+Beberapa hal yang sengaja tidak ikut disalin:
+
+**Sumber data** biasanya berupa beberapa tautan panjang yang membuat pesan sulit dibaca di ponsel. Cukup ada di tugasnya.
+
+**Selesai bila** memang penting, tetapi bacaannya untuk orang yang sudah memutuskan mengambil, bukan untuk orang yang sedang menimbang. Menaruhnya di pengumuman membuat pesan terasa berat.
+
+**Perkiraan jam kerja** justru wajib ada, karena itu satu-satunya angka yang dipakai orang untuk memutuskan apakah pekerjaan ini muat di waktu luangnya. Kalau saat mengumumkan angkanya belum ada, berarti tugas itu belum ditriase dan belum siap diumumkan.
+
+### Siapa yang mengumumkan
+
+Pengumuman dikirim oleh **koordinator IM yang sedang bertugas**, yaitu orang yang hari itu menyisir kolom Permintaan Masuk. Perannya melekat pada hari, bukan pada nama, dan siapa pun yang ditunjuk bisa memegangnya.
+
+Cukup sekali sehari, satu pesan, berisi semua tugas yang selesai ditriase hari itu. Mengumumkan setiap kali ada tugas baru terdengar lebih responsif, tetapi dalam praktiknya lebih sulit dijaga dan lebih cepat membuat grup jenuh.
+
+Karena jejaring ini berjalan atas dasar kesukarelaan, akan ada hari ketika yang bertugas berhalangan dan tidak sempat mengabari. Itu wajar dan tidak perlu diperlakukan sebagai pelanggaran. Dua aturan sederhana yang menjaganya tetap berjalan:
+
+- Siapa pun boleh mengumumkan kalau yang bertugas belum sempat. Tidak perlu izin.
+- Tugas yang terlanjur diumumkan dua kali jauh lebih ringan akibatnya daripada tugas yang tidak pernah diumumkan sama sekali.
+
+Sebutkan nama yang bertugas hari itu di grup, satu baris saja. Ini bukan formalitas: peran yang tidak disebut siapa pemegangnya akan diasumsikan dipegang orang lain, dan akhirnya tidak dipegang siapa pun.
+
+### Kapan tidak perlu diumumkan
+
+Tidak setiap tugas layak jadi pesan di grup. Tugas yang sudah jelas siapa pengerjanya sejak awal, atau yang lahir dari percakapan yang sedang berlangsung di grup itu juga, cukup dibalas dengan tautannya saja.
+
+Grup yang menerima pengumuman terlalu sering akan berhenti membacanya, dan saat itu terjadi, pengumuman yang benar-benar butuh kontributor pun ikut terlewat.
+
+Untuk tugas yang sudah selesai, pengumuman berbentuk lebih pendek dan lebih berguna dikirim menempel pada produknya:
+
+```
+✅ *SELESAI* #23 Peta sebaran lokasi pengungsian
+Dikerjakan oleh: (nama)
+Berkas: (tautan folder kerja bersama)
+```
 
 ---
 
-## Pembagian tempat penyimpanan
-
-Tetapkan sejak awal. Kalau tidak, semuanya akan berakhir di percakapan, karena itu yang paling mudah.
-
-| Jenis | Tempat |
-|---|---|
-| Data terstruktur yang diisi beramai-ramai | Lembar kerja daring |
-| Data mentah, foto, berkas besar | Folder kerja bersama. Repo hanya memuat tautannya. |
-| Kredensial akun pendataan | Pengelola kata sandi. **Tidak pernah** di lembar kerja atau repo. |
-| Dokumen naratif, metodologi, catatan | Repo |
-| Temuan lapangan | Tugas jenis Finding |
-| Produk bermasalah yang sudah beredar | Tugas jenis Incident |
 
 ---
 
-## Cara kerja untuk kontributor
+# Usulan perbaikan
 
-**Kontributor tidak perlu membuat pull request.** Kalau setiap dokumen harus menunggu tinjauan, koordinator jadi hambatan dan dokumentasi tidak akan terisi.
+Cara kerja di dokumen ini masih tebakan awal. Sebagian mungkin tidak berguna, sebagian mungkin justru menghambat.
 
-| Siapa | Cara |
-|---|---|
-| Kontributor | Menyunting langsung lewat antarmuka web |
-| Koordinator | Pull request untuk template, konvensi, dan perubahan struktur |
-
-Riwayat perubahan tetap jadi jaring pengaman. Yang penting dokumentasinya terisi, bukan prosedurnya rapi.
-
-Sampaikan ini eksplisit kepada kontributor baru: **tidak ada yang bisa dirusak, semua versi tersimpan.** Ini hambatan psikologis terbesar bagi orang yang belum pernah memakai GitHub, dan mereka perlu mendengarnya langsung, bukan menyimpulkannya sendiri.
-
-Catatan antarmuka web: folder kosong tidak bisa dibuat. Caranya adalah mengetik path lengkap di kolom nama berkas. Mengetik `produk/peta/catatan.md` akan membuat foldernya otomatis.
-
----
-
-## Dokumentasi bukan tugas tersendiri
-
-Catatan metodologi dan keterangan sumber adalah **hasil** dari tugas yang menghasilkannya, bukan pekerjaan terpisah. Kalau tiap dokumen dibuatkan tugas, papan jadi dua kali panjang tanpa tambahan informasi.
-
-Aturannya: **kalau dokumen mencatat apa yang sudah dikerjakan, dia bagian dari tugas yang mengerjakannya. Kalau dia menetapkan sesuatu yang belum diputuskan, dia tugas sendiri.**
-
----
-
-## Prinsip pengisian data
-
-- Yang belum diketahui diisi `belum diketahui`, **bukan dikosongkan**. Sel kosong tidak bisa dibedakan antara "belum sempat diisi" dan "memang tidak ada".
-- Setiap tabel punya kolom `diverifikasi_oleh` dan `tgl_verifikasi`. Data tanpa penanggung jawab akan jadi beban dalam setahun.
-- Pisahkan "ada" dan "sudah diperiksa" sebagai kolom berbeda.
-- Kolom berdaftar pilihan dipilih, tidak diketik bebas.
-- Baris contoh diberi format berbeda dan dihapus sebelum pengisian sungguhan.
+Kalau ada yang membingungkan, merepotkan, atau kurang, sampaikan saja di grup WhatsApp atau lewat komentar di tugas mana pun. Tidak perlu usulan yang matang, keluhan setengah jadi juga berguna.
