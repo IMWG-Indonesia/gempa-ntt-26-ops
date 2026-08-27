@@ -3,6 +3,6 @@ contact_links:
   - name: Diskusi cepat di WhatsApp
     url: TAUTAN-GRUP-WA
     about: Untuk tanya-jawab dan koordinasi harian. Kalau sudah jadi kebutuhan yang jelas, tuliskan sebagai tugas di sini.
-  - name: Konvensi papan tugas
-    url: https://github.com/IMWG-Indonesia/NAMA-REPO/blob/main/KONVENSI.md
+  - name: Cara kerja papan tugas
+    url: https://github.com/IMWG-Indonesia/gempa-ntt-26-ops
     about: Cara mengisi tugas, arti label, dan alur papan.
