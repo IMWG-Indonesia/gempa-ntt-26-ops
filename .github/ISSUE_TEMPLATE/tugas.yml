@@ -90,6 +90,17 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: asal-permintaan
+    attributes:
+      label: Asal permintaan
+      description: |
+        Dari mana permintaan ini datang, beserta tanggalnya. Penting untuk permintaan
+        yang lahir di luar papan, karena konteksnya tidak ikut tersalin ke sini.
+      placeholder: Grup WhatsApp IHCP, 24 Agustus. Bisa juga rapat koordinasi klaster, 23 Agustus.
+    validations:
+      required: false
+
   - type: checkboxes
     id: tata-kelola
     attributes:
